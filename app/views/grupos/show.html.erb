@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id grupo:</strong>
+  <%= @grupo.id_grupo %>
+</p>
+
+<p>
+  <strong>Taller:</strong>
+  <%= @grupo.taller %>
+</p>
+
+<p>
+  <strong>Hora inicio:</strong>
+  <%= @grupo.hora_inicio %>
+</p>
+
+<p>
+  <strong>Hora fin:</strong>
+  <%= @grupo.hora_fin %>
+</p>
+
+<p>
+  <strong>Nivel:</strong>
+  <%= @grupo.nivel %>
+</p>
+
+<p>
+  <strong>Dias:</strong>
+  <%= @grupo.dias %>
+</p>
+
+<p>
+  <strong>Semestre:</strong>
+  <%= @grupo.semestre %>
+</p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @grupo.fecha_inicio %>
+</p>
+
+<p>
+  <strong>Fecha fin:</strong>
+  <%= @grupo.fecha_fin %>
+</p>
+
+<p>
+  <strong>Cupo:</strong>
+  <%= @grupo.cupo %>
+</p>
+
+<%= link_to 'Edit', edit_grupo_path(@grupo) %> |
+<%= link_to 'Back', grupos_path %>

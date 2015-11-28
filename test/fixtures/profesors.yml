@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_prof: MyString
+  apellido_pat_prof: MyString
+  apellido_mat_prof: MyString
+  observaciones: MyText
+  area_id: 
+
+two:
+  nombre_prof: MyString
+  apellido_pat_prof: MyString
+  apellido_mat_prof: MyString
+  observaciones: MyText
+  area_id: 

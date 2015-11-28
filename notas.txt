@@ -1,16 +1,29 @@
-Scaffold
+**Base de Datos**
+
+---tablas---
 
 rails generate model Area tipo_area
 
 rails generate model Pago tipo_pago 
 
-rails generate model Curso id_area:integer nombre_curso
-
-rails generate model Taller id_prof id_curso:integer
-
 rails generate scaffold Alumno curp nombre apellido_paterno apellido_materno sexo direccion telefono fecha_de_registro tipo_de_sangre nombre_tutor telefono_tutor
 
-rails generate scaffold Profesor id_prof id_area:integer nombre_prof apellido_pat_prof apellido_mat_prof observaciones:text 
+rails generate scaffold Profesor nombre_prof apellido_pat_prof apellido_mat_prof observaciones:text area:references
 
-rails generate scaffold Grupo id_grupo id_taller hora_inicio:time hora_fin:time nivel dias semestre fecha_inicio:date fecha_fin:date cupo:integer
+rails generate model Curso nombre_curso area:references
 
+rails generate model Taller id_taller profesor:references curso:references
+
+rails generate scaffold Grupo id_grupo taller:references hora_inicio:time hora_fin:time nivel dias semestre fecha_inicio:date fecha_fin:date cupo:integer
+
+--relaciones 1 a muchos--
+
+rails generate migration Profesor add_area_id_to_profesor area:references
+
+rails generate migration Curso add_area_id_to_curso area:references
+
+rails generate migration Taller add_pofresor_id_to_taller profesor:references add_curso_id_to_taller curso_references
+
+rails generate migration Grupo add_taller_id_to_grupo taller_references
+
+***

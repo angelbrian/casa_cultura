@@ -1,0 +1,43 @@
+<h1>Listing grupos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id grupo</th>
+      <th>Taller</th>
+      <th>Hora inicio</th>
+      <th>Hora fin</th>
+      <th>Nivel</th>
+      <th>Dias</th>
+      <th>Semestre</th>
+      <th>Fecha inicio</th>
+      <th>Fecha fin</th>
+      <th>Cupo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grupos.each do |grupo| %>
+      <tr>
+        <td><%= grupo.id_grupo %></td>
+        <td><%= grupo.taller %></td>
+        <td><%= grupo.hora_inicio %></td>
+        <td><%= grupo.hora_fin %></td>
+        <td><%= grupo.nivel %></td>
+        <td><%= grupo.dias %></td>
+        <td><%= grupo.semestre %></td>
+        <td><%= grupo.fecha_inicio %></td>
+        <td><%= grupo.fecha_fin %></td>
+        <td><%= grupo.cupo %></td>
+        <td><%= link_to 'Show', grupo %></td>
+        <td><%= link_to 'Edit', edit_grupo_path(grupo) %></td>
+        <td><%= link_to 'Destroy', grupo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grupo', new_grupo_path %>
