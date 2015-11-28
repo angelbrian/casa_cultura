@@ -1,0 +1,3 @@
+Scaffold
+
+rails generate scaffold student curp nombre apellido_paterno apellido_materno sexo direccion telefono fecha_de_registro tipo_de_sangre nombre_tutor telefono_tutor
