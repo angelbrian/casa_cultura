@@ -1,3 +1,16 @@
 Scaffold
 
-rails generate scaffold student curp nombre apellido_paterno apellido_materno sexo direccion telefono fecha_de_registro tipo_de_sangre nombre_tutor telefono_tutor
+rails generate model Area tipo_area
+
+rails generate model Pago tipo_pago 
+
+rails generate model Curso id_area:integer nombre_curso
+
+rails generate model Taller id_prof id_curso:integer
+
+rails generate scaffold Alumno curp nombre apellido_paterno apellido_materno sexo direccion telefono fecha_de_registro tipo_de_sangre nombre_tutor telefono_tutor
+
+rails generate scaffold Profesor id_prof id_area:integer nombre_prof apellido_pat_prof apellido_mat_prof observaciones:text 
+
+rails generate scaffold Grupo id_grupo id_taller hora_inicio:time hora_fin:time nivel dias semestre fecha_inicio:date fecha_fin:date cupo:integer
+

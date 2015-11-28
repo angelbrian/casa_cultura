@@ -2,33 +2,31 @@
 <html lang="es">
     <head>
         <title>Casa de la Cultura</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
-
-    <section id="container" >
-        <!--header start-->
-        <header class="header black-bg">
-            <div class="sidebar-toggle-box">
-                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-            </div>
-            <div class="nav notify-row" id="top_menu">
-                <ul class="nav top-menu">
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-                            <i class="fa fa-tasks"></i>
-                            <span class="badge bg-theme">4</span>
-                        </a>
+        <header>
+            <nav class="be-red white large-padding">
+                <ul class="no-list row center-xs middle-xs">
+                    <li class="col-md">
+                        <h1 class = "no-margin id = logo"> Casa de la cultura </h1>
+                    </li>
+                    <li class = "col-md">
+                        <%= link_to "Home", root_path %>                        
+                    </li>
+                    <li class = "col-md">
+                        Alumnos
+                    </li>
+                    <li class= "col-md">
+                        Profesores
                     </li>
                 </ul>
-            </div>
-            <div class="top-menu">
-                <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
-                </ul>
-            </div>
+            </nav>
         </header>
-   </section>
   
     <%= yield %>
 
