@@ -1,0 +1,65 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :curp %><br>
+    <%= f.text_field :curp %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido_paterno %><br>
+    <%= f.text_field :apellido_paterno %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido_materno %><br>
+    <%= f.text_field :apellido_materno %>
+  </div>
+  <div class="field">
+    <%= f.label :sexo %><br>
+    <%= f.text_field :sexo %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_de_nac %><br>
+    <%= f.date_select :fecha_de_nac %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_de_registro %><br>
+    <%= f.text_field :fecha_de_registro %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_de_sangre %><br>
+    <%= f.text_field :tipo_de_sangre %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_tutor %><br>
+    <%= f.text_field :nombre_tutor %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono_tutor %><br>
+    <%= f.text_field :telefono_tutor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

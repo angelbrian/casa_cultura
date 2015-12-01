@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clave_taller: MyString
+  profesor_id: 
+  curso_id: 
+
+two:
+  clave_taller: MyString
+  profesor_id: 
+  curso_id: 

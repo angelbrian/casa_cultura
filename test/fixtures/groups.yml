@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clave_grupo: MyString
+  taller_id: 
+  hora_inicio: 2015-11-30 19:56:33
+  hora_fin: 2015-11-30 19:56:33
+  nivel: MyString
+  dias: MyString
+  semestre: MyString
+  fecha_inicio: 2015-11-30
+  fecha_fin: 2015-11-30
+  cupo: 1
+
+two:
+  clave_grupo: MyString
+  taller_id: 
+  hora_inicio: 2015-11-30 19:56:33
+  hora_fin: 2015-11-30 19:56:33
+  nivel: MyString
+  dias: MyString
+  semestre: MyString
+  fecha_inicio: 2015-11-30
+  fecha_fin: 2015-11-30
+  cupo: 1
