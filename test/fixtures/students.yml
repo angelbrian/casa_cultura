@@ -9,7 +9,7 @@ one:
   fecha_de_nac: 2015-11-30
   direccion: MyString
   telefono: MyString
-  fecha_de_registro: MyString
+  fecha_de_registro: 2015-11-30
   tipo_de_sangre: MyString
   nombre_tutor: MyString
   telefono_tutor: MyString
@@ -23,7 +23,7 @@ two:
   fecha_de_nac: 2015-11-30
   direccion: MyString
   telefono: MyString
-  fecha_de_registro: MyString
+  fecha_de_registro: 2015-11-30
   tipo_de_sangre: MyString
   nombre_tutor: MyString
   telefono_tutor: MyString

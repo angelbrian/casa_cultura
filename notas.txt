@@ -6,7 +6,7 @@ rails generate model Area tipo_area
 
 rails generate model Pay tipo_pago 
 
-rails generate scaffold Student curp nombre apellido_paterno apellido_materno sexo fecha_de_nac:date direccion telefono fecha_de_registro tipo_de_sangre nombre_tutor telefono_tutor
+rails generate scaffold Student curp nombre apellido_paterno apellido_materno sexo fecha_de_nac:date direccion telefono fecha_de_registro:date tipo_de_sangre nombre_tutor telefono_tutor
 
 rails generate scaffold Teacher nombre_prof apellido_pat_prof apellido_mat_prof observaciones:text area:references
 

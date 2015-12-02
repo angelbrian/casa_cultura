@@ -9,7 +9,7 @@ class CreateStudents < ActiveRecord::Migration
       t.date :fecha_de_nac
       t.string :direccion
       t.string :telefono
-      t.string :fecha_de_registro
+      t.date :fecha_de_registro
       t.string :tipo_de_sangre
       t.string :nombre_tutor
       t.string :telefono_tutor
