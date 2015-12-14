@@ -5,23 +5,25 @@ one:
   nombre: MyString
   apellido_paterno: MyString
   apellido_materno: MyString
-  fecha_registro: 2015-11-27
-  telefono: MyString
+  sexo: MyString
+  fecha_de_nac: 2015-11-30
   direccion: MyString
-  tipo_sangre: MyString
+  telefono: MyString
+  fecha_de_registro: 2015-11-30
+  tipo_de_sangre: MyString
   nombre_tutor: MyString
   telefono_tutor: MyString
-  sexo: MyString
 
 two:
   curp: MyString
   nombre: MyString
   apellido_paterno: MyString
   apellido_materno: MyString
-  fecha_registro: 2015-11-27
-  telefono: MyString
+  sexo: MyString
+  fecha_de_nac: 2015-11-30
   direccion: MyString
-  tipo_sangre: MyString
+  telefono: MyString
+  fecha_de_registro: 2015-11-30
+  tipo_de_sangre: MyString
   nombre_tutor: MyString
   telefono_tutor: MyString
-  sexo: MyString

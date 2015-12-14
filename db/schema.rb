@@ -11,25 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151128220953) do
+ActiveRecord::Schema.define(version: 20151201022316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "alumnos", primary_key: "curp", force: true do |t|
-    t.string   "nombre",           limit: 30, null: false
-    t.string   "apellido_paterno", limit: 30, null: false
-    t.string   "apellido_materno", limit: 30
-    t.date     "fecha_registro",              null: false
-    t.string   "telefono",         limit: 15, null: false
-    t.string   "direccion",        limit: 50, null: false
-    t.string   "tipo_sangre",      limit: 4,  null: false
-    t.string   "nombre_tutor",     limit: 50, null: false
-    t.string   "telefono_tutor",   limit: 15, null: false
-    t.string   "sexo",             limit: 1,  null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "areas", force: true do |t|
     t.string   "tipo_area"
@@ -37,16 +22,17 @@ ActiveRecord::Schema.define(version: 20151128220953) do
     t.datetime "updated_at"
   end
 
-  create_table "cursos", force: true do |t|
+  create_table "courses", force: true do |t|
     t.string   "nombre_curso"
     t.integer  "area_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "cursos", ["area_id"], name: "index_cursos_on_area_id", using: :btree
+  add_index "courses", ["area_id"], name: "index_courses_on_area_id", using: :btree
 
-  create_table "grupos", primary_key: "id_grupo", force: true do |t|
+  create_table "groups", force: true do |t|
+    t.string   "clave_grupo"
     t.integer  "taller_id"
     t.time     "hora_inicio"
     t.time     "hora_fin"
@@ -60,15 +46,43 @@ ActiveRecord::Schema.define(version: 20151128220953) do
     t.datetime "updated_at"
   end
 
-  add_index "grupos", ["taller_id"], name: "index_grupos_on_taller_id", using: :btree
+  add_index "groups", ["taller_id"], name: "index_groups_on_taller_id", using: :btree
 
-  create_table "pagos", force: true do |t|
+  create_table "lessons", force: true do |t|
+    t.string   "clave_taller"
+    t.integer  "profesor_id"
+    t.integer  "curso_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lessons", ["curso_id"], name: "index_lessons_on_curso_id", using: :btree
+  add_index "lessons", ["profesor_id"], name: "index_lessons_on_profesor_id", using: :btree
+
+  create_table "pays", force: true do |t|
     t.string   "tipo_pago"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "profesors", force: true do |t|
+  create_table "students", force: true do |t|
+    t.string   "curp"
+    t.string   "nombre"
+    t.string   "apellido_paterno"
+    t.string   "apellido_materno"
+    t.string   "sexo"
+    t.date     "fecha_de_nac"
+    t.string   "direccion"
+    t.string   "telefono"
+    t.date     "fecha_de_registro"
+    t.string   "tipo_de_sangre"
+    t.string   "nombre_tutor"
+    t.string   "telefono_tutor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teachers", force: true do |t|
     t.string   "nombre_prof"
     t.string   "apellido_pat_prof"
     t.string   "apellido_mat_prof"
@@ -78,31 +92,6 @@ ActiveRecord::Schema.define(version: 20151128220953) do
     t.datetime "updated_at"
   end
 
-  add_index "profesors", ["area_id"], name: "index_profesors_on_area_id", using: :btree
-
-  create_table "students", primary_key: "curp", force: true do |t|
-    t.string   "nombre",           limit: 30, null: false
-    t.string   "apellido_paterno", limit: 30, null: false
-    t.string   "apellido_materno", limit: 30
-    t.date     "fecha_registro",              null: false
-    t.string   "telefono",         limit: 15, null: false
-    t.string   "direccion",        limit: 50, null: false
-    t.string   "tipo_sangre",      limit: 4,  null: false
-    t.string   "nombre_tutor",     limit: 50, null: false
-    t.string   "telefono_tutor",   limit: 15, null: false
-    t.string   "sexo",             limit: 1,  null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tallers", primary_key: "id_taller", force: true do |t|
-    t.integer  "profesor_id"
-    t.integer  "curso_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "tallers", ["curso_id"], name: "index_tallers_on_curso_id", using: :btree
-  add_index "tallers", ["profesor_id"], name: "index_tallers_on_profesor_id", using: :btree
+  add_index "teachers", ["area_id"], name: "index_teachers_on_area_id", using: :btree
 
 end

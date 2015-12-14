@@ -1,0 +1,89 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row mt">
+    <div class="col-lg-12">
+        <div class="form-panel"> 
+            <form class="form-horizontal style-form">
+                <div class="form-group">
+                    <%= f.label :curp, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :curp, class: "form-control" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :nombre, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :nombre, class: "form-control" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :apellido_paterno, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :apellido_paterno, class: "form-control" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :apellido_materno, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :apellido_materno, class: "form-control" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :sexo, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :sexo, class: "form-control" %>
+                    </div>
+                </div>
+                 <!--fecha de nacimiento-->
+                
+                <div class="form-group">
+                    <%= f.label :direccion, class: "col-sm-2 col-sm-2 control-label"%>
+                    <div class="col-sm-10">
+                        <%= f.text_field :direccion, class: "form-control" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :telefono, class: "col-sm-2 col-sm-2 control-label"%>
+                    <div class="col-sm-10">
+                        <%= f.text_field :telefono, class: "form-control" %>
+                    </div>
+                </div>
+                 <!--fecha de registro-->
+                
+                <div class="form-group">
+                    <%= f.label :tipo_de_sangre, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :tipo_de_sangre, class: "form-control" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :nombre_tutor, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :nombre_tutor, class: "form-control" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :telefono_tutor, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :telefono_tutor, class: "form-control" %>
+                    </div>
+                </div>
+                <div class="actions">
+                    <%= f.submit %>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% end %>

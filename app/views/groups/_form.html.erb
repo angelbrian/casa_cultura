@@ -1,0 +1,57 @@
+<%= form_for(@group) do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% @group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :clave_grupo %><br>
+    <%= f.text_field :clave_grupo %>
+  </div>
+  <div class="field">
+    <%= f.label :taller_id %><br>
+    <%= f.text_field :taller_id %>
+  </div>
+  <div class="field">
+    <%= f.label :hora_inicio %><br>
+    <%= f.time_select :hora_inicio %>
+  </div>
+  <div class="field">
+    <%= f.label :hora_fin %><br>
+    <%= f.time_select :hora_fin %>
+  </div>
+  <div class="field">
+    <%= f.label :nivel %><br>
+    <%= f.text_field :nivel %>
+  </div>
+  <div class="field">
+    <%= f.label :dias %><br>
+    <%= f.text_field :dias %>
+  </div>
+  <div class="field">
+    <%= f.label :semestre %><br>
+    <%= f.text_field :semestre %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_inicio %><br>
+    <%= f.date_select :fecha_inicio %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_fin %><br>
+    <%= f.date_select :fecha_fin %>
+  </div>
+  <div class="field">
+    <%= f.label :cupo %><br>
+    <%= f.number_field :cupo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
