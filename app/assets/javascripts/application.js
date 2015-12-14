@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
+///*
 = require bootstrap-inputmask
 = requiere chart-master
 = requiere fancybox
@@ -23,3 +24,4 @@
 = requiere gritter/css
 = requiere gritter/js
 = requiere jquery-easy-pie-chart
+//*/

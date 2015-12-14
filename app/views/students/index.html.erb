@@ -1,7 +1,7 @@
     <h3><i class="fa fa-angle-right"></i>Lista de Alumnos</h3>
     <div class="row mt">
         <div class="col-lg-12">
-            <div class="content-panel">
+            <div class="content-panel">                
                 <h4><i class="fa fa-angle-right"></i>Lista General</h4>
                 <section id="unseen">
                     <table class="table table-bordered table-striped table-condensed">
@@ -9,8 +9,7 @@
                             <tr>
                                 <th>Curp</th>
                                 <th>Nombre</th>
-                                <th>Apellido Paterno</th>
-                                <th>Apellido Materno</th>
+
                                 <th class="numeric">Sexo</th>
                                 <th class="numeric">Fecha de nacimiento</th>
                                 <th>Dirección</th>
@@ -26,9 +25,9 @@
                             <% @students.each do |student| %>
                               <tr>
                                 <td data-title="Code"><%= student.curp %></td>
-                                <td data-title="Company"><%= student.nombre %></td>
-                                <td><%= student.apellido_paterno %></td>
-                                <td><%= student.apellido_materno %></td>
+                                <td data-title="Company"><%= student.nombre %> 
+                                <%= student.apellido_paterno %>
+                                <%= student.apellido_materno %></td>
                                 <td><%= student.sexo %></td>
                                 <td><%= student.fecha_de_nac %></td>
                                 <td><%= student.direccion %></td>
@@ -37,17 +36,28 @@
                                 <td><%= student.tipo_de_sangre %></td>
                                 <td><%= student.nombre_tutor %></td>
                                 <td><%= student.telefono_tutor %></td>
-                                <td><%= link_to 'Show', student %></td>
-                                <td><%= link_to 'Editar', edit_student_path(student) %></td>
-                                <td><%= link_to 'Eliminar', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                  <td><%= link_to student do %>
+                                         <button class="btn btn-success btn-xs"><i class=" fa fa-check"></i></button>
+                                      <% end %>
+                                  </td>
+                                  <td><%= link_to edit_student_path(student) do %>
+                                        <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <% end %>
+                                  </td>
+                                <td><%= link_to student, method: :delete, data: { confirm: '¿Estas seguro?' } do %>
+                                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>  
+                                    <% end %>
+                                </td>
                               </tr>
                             <% end %>
                       </tbody>
                     </table>
                 </section>
             </div>
-            <%= link_to 'Agregar Alumno', new_student_path %>    
+            <div class="showback">
+                <%= link_to new_student_path do %>
+                    <button type="button" class="btn btn-success">Nuevo Alumno</button>
+                <% end %>
+            </div>
         </div>
     </div>
-
-
