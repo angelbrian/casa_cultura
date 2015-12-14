@@ -9,15 +9,9 @@
                             <tr>
                                 <th>Curp</th>
                                 <th>Nombre</th>
-
                                 <th class="numeric">Sexo</th>
-                                <th class="numeric">Fecha de nacimiento</th>
-                                <th>Dirección</th>
                                 <th class="numeric">Telefono</th>
                                 <th class="numeric">Fecha de registro</th>
-                                <th class="numeric">Tipo de sangre</th>
-                                <th>Nombre del tutor</th>
-                                <th >Telefono del tutor</th> 
                                 <th colspan="3"></th>
                             </tr>
                         </thead>
@@ -29,13 +23,8 @@
                                 <%= student.apellido_paterno %>
                                 <%= student.apellido_materno %></td>
                                 <td><%= student.sexo %></td>
-                                <td><%= student.fecha_de_nac %></td>
-                                <td><%= student.direccion %></td>
                                 <td><%= student.telefono %></td>
                                 <td><%= student.fecha_de_registro %></td>
-                                <td><%= student.tipo_de_sangre %></td>
-                                <td><%= student.nombre_tutor %></td>
-                                <td><%= student.telefono_tutor %></td>
                                   <td><%= link_to student do %>
                                          <button class="btn btn-success btn-xs"><i class=" fa fa-check"></i></button>
                                       <% end %>
