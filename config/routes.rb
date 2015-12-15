@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :lessons
+
+  resources :courses
+
+  resources :pays
+
+  resources :areas
+
   resources :students
 
   resources :groups
@@ -10,6 +18,9 @@ Rails.application.routes.draw do
   resources :profesors
 
   resources :alumnos
+  
+  resources :areas
+    
 
   get 'welcome/index'
 
