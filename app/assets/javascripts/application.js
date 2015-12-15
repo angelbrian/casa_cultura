@@ -12,16 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+= require turbolinks
 //= require_tree .
 
 ///*
-= require bootstrap-inputmask
-= requiere chart-master
-= requiere fancybox
-= requiere fullcalendar
-= requiere gritter
-= requiere gritter/css
-= requiere gritter/js
-= requiere jquery-easy-pie-chart
+//= require bootstrap-inputmask
+//= requiere chart-master
+//= requiere fancybox
+//= requiere fullcalendar
+//= requiere gritter
+//= requiere gritter/css
+//= requiere gritter/js
+//= requiere jquery-easy-pie-chart
 //*/
