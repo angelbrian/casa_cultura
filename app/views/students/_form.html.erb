@@ -1,3 +1,4 @@
+
 <%= form_for(@student) do |f| %>
   <% if @student.errors.any? %>
     <div id="error_explanation">
@@ -14,68 +15,86 @@
     <div class="col-lg-12">
         <div class="form-panel"> 
             <form class="form-horizontal style-form">
+                <h4>Datos Personales</h4><hr>
                 <div class="form-group">
-                    <%= f.label :curp, class: "col-sm-2 col-sm-2 control-label" %>
-                    <div class="col-sm-10">
-                        <%= f.text_field :curp, class: "form-control" %>
+                    <P ALIGN=right><%= f.label :curp, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-4">
+                        <%=f.text_field :curp, class: "form-control" %>
+                        <br>
                     </div>
                 </div>
                 <div class="form-group">
-                    <%= f.label :nombre, class: "col-sm-2 col-sm-2 control-label" %>
-                    <div class="col-sm-10">
+                    <P ALIGN=right><%= f.label :sexo, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-4">
+                            <!--<%= f.text_field :sexo, class: "form-control" %>-->
+                            <%= f.select :sexo, options_for_select([["Masculino", "M"], ["Femenino", "F"]]) %>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <P ALIGN=right><%= f.label :nombre, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-4">
                         <%= f.text_field :nombre, class: "form-control" %>
+                        <br>
                     </div>
                 </div>
                 <div class="form-group">
-                    <%= f.label :apellido_paterno, class: "col-sm-2 col-sm-2 control-label" %>
-                    <div class="col-sm-10">
+                    <P ALIGN=right><%= f.label :telefono, class: "col-sm-2 col-sm-2 control-label"%>
+                    <div class="col-sm-4">
+                        <%= f.text_field :telefono, class: "form-control" %>
+                        <br>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <P ALIGN=right><%= f.label :apellido_paterno, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-4">
                         <%= f.text_field :apellido_paterno, class: "form-control" %>
+                        <br>
                     </div>
                 </div>
                 <div class="form-group">
-                    <%= f.label :apellido_materno, class: "col-sm-2 col-sm-2 control-label" %>
-                    <div class="col-sm-10">
+                    <P ALIGN=right><%= f.label :tipo_de_sangre, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-4">
+                        <!--<%= f.text_field :tipo_de_sangre, class: "form-control" %>-->
+                        <%= f.select :tipo_de_sangre, options_for_select([["AB+", "AB+"], ["AB-", "AB-"],["A+","A+"],["A-","A-"],["B+","B+"],["B-","B-"],["0+","0+"],["0-","0-"]]) %>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <P ALIGN=right><%= f.label :apellido_materno, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-4">
                         <%= f.text_field :apellido_materno, class: "form-control" %>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <%= f.label :sexo, class: "col-sm-2 col-sm-2 control-label" %>
-                    <div class="col-sm-10">
-                        <%= f.text_field :sexo, class: "form-control" %>
+                        <br>
                     </div>
                 </div>
                  <!--fecha de nacimiento-->
-                
-                <div class="form-group">
-                    <%= f.label :direccion, class: "col-sm-2 col-sm-2 control-label"%>
-                    <div class="col-sm-10">
-                        <%= f.text_field :direccion, class: "form-control" %>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <%= f.label :telefono, class: "col-sm-2 col-sm-2 control-label"%>
-                    <div class="col-sm-10">
-                        <%= f.text_field :telefono, class: "form-control" %>
-                    </div>
-                </div>
                  <!--fecha de registro-->
-                
                 <div class="form-group">
-                    <%= f.label :tipo_de_sangre, class: "col-sm-2 col-sm-2 control-label" %>
-                    <div class="col-sm-10">
-                        <%= f.text_field :tipo_de_sangre, class: "form-control" %>
+                    <P ALIGN=right><%= f.label :direccion, class: "col-sm-2 col-sm-2 control-label"%>
+                    <div class="col-sm-4">
+                        <%= f.text_field :direccion, class: "form-control" %>
+                        <br>
                     </div>
                 </div>
                 <div class="form-group">
-                    <%= f.label :nombre_tutor, class: "col-sm-2 col-sm-2 control-label" %>
-                    <div class="col-sm-10">
+                    <br><h4>Datos del Tutor</h4><hr>
+                </div>
+                <div class="form-group">
+                    <P ALIGN=right><%= f.label :nombre_tutor, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-4">
                         <%= f.text_field :nombre_tutor, class: "form-control" %>
+                        <br>
                     </div>
                 </div>
                 <div class="form-group">
-                    <%= f.label :telefono_tutor, class: "col-sm-2 col-sm-2 control-label" %>
-                    <div class="col-sm-10">
+                    <P ALIGN=right><%= f.label :telefono_tutor, class: "col-sm-2 col-sm-2 control-label" %>
+                    <div class="col-sm-4">
                         <%= f.text_field :telefono_tutor, class: "form-control" %>
+                        <br>
                     </div>
                 </div>
                 <div class="actions">

@@ -1,4 +1,4 @@
-<h1>Listing areas</h1>
+<h1>Lista de Áreas</h1>
 
 <table>
   <thead>
@@ -12,9 +12,9 @@
     <% @areas.each do |area| %>
       <tr>
         <td><%= area.tipo_area %></td>
-        <td><%= link_to 'Show', area %></td>
-        <td><%= link_to 'Edit', edit_area_path(area) %></td>
-        <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ' |Ver| ', area %></td>
+        <td><%= link_to ' |Editar| ', edit_area_path(area) %></td>
+        <td><%= link_to ' |Destruir| ', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Area', new_area_path %>
+<%= link_to ' |Nueva Area| ', new_area_path %>

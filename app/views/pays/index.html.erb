@@ -1,4 +1,4 @@
-<h1>Listing pays</h1>
+<h1>Lista de pagos</h1>
 
 <table>
   <thead>
@@ -12,9 +12,9 @@
     <% @pays.each do |pay| %>
       <tr>
         <td><%= pay.tipo_pago %></td>
-        <td><%= link_to 'Show', pay %></td>
-        <td><%= link_to 'Edit', edit_pay_path(pay) %></td>
-        <td><%= link_to 'Destroy', pay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ' |Ver| ', pay %></td>
+        <td><%= link_to ' |Editar| ', edit_pay_path(pay) %></td>
+        <td><%= link_to ' |Destruir| ', pay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Pay', new_pay_path %>
+<%= link_to ' |Nuevo Pago| ', new_pay_path %>

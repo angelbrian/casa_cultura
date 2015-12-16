@@ -1,4 +1,4 @@
-<h1>Listing groups</h1>
+<h1>Lista de Grupos</h1>
 
 <table>
   <thead>
@@ -30,9 +30,9 @@
         <td><%= group.fecha_inicio %></td>
         <td><%= group.fecha_fin %></td>
         <td><%= group.cupo %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ' |Ver| ', group %></td>
+        <td><%= link_to ' |Editar| ', edit_group_path(group) %></td>
+        <td><%= link_to ' |Destruir| ', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Group', new_group_path %>
+<%= link_to 'Nuevo Grupo', new_group_path %>

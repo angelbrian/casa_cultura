@@ -10,26 +10,40 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :nombre_prof %><br>
-    <%= f.text_field :nombre_prof %>
+  <h4>Datos Personales</h4><hr>
+  <div class="form-group">
+    <P ALIGN=right><%= f.label :nombre_prof, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-4">
+                <%=f.text_field :nombre_prof, class: "form-control" %>
+                <br>
+          </div>
   </div>
-  <div class="field">
-    <%= f.label :apellido_pat_prof %><br>
-    <%= f.text_field :apellido_pat_prof %>
+  <div class="form-group">
+    <P ALIGN=right><%= f.label :apellido_pat_prof, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-4">
+                <%=f.text_field :apellido_pat_prof, class: "form-control" %>
+                <br>
+          </div>
   </div>
-  <div class="field">
-    <%= f.label :apellido_mat_prof %><br>
-    <%= f.text_field :apellido_mat_prof %>
+  <div class="form-group">
+    <P ALIGN=right><%= f.label :apellido_mat_prof, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-4">
+                <%=f.text_field :apellido_mat_prof, class: "form-control" %>
+                <br>
+          </div>
   </div>
-  <div class="field">
-    <%= f.label :observaciones %><br>
-    <%= f.text_area :observaciones %>
+ <div class="form-group">
+    <P ALIGN=right><%= f.label :observaciones, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-4">
+                <%=f.text_area :observaciones, class: "form-control" %>
+                <br>
+          </div>
   </div>
-  <div class="field">
-    <%= f.label :area_id %><br>
-    <%= f.text_field :area_id %>
+  <div class="form-group">
+    <P ALIGN=right><%= f.label :area, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-4">
+                <%=f.text_field :area, class: "form-control" %>
+          </div>
   </div>
   <div class="actions">
     <%= f.submit %>

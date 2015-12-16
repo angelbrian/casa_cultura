@@ -10,18 +10,27 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :clave_taller %><br>
-    <%= f.text_field :clave_taller %>
+  <h4></h4><hr>
+  <div class="form-group">
+    <P ALIGN=right><%= f.label :clave_taller, class: "col-sm-2 col-sm-2 control-label" %>
+      <div class="col-sm-4">
+          <%=f.text_field :clave_taller, class: "form-control" %>
+          <br>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :profesor_id %><br>
-    <%= f.text_field :profesor_id %>
+  <div class="form-group">
+    <P ALIGN=right><%= f.label :profesor_id, class: "col-sm-2 col-sm-2 control-label" %>
+      <div class="col-sm-4">
+          <%=f.text_field :profesor_id, class: "form-control" %>
+          <br>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :curso_id %><br>
-    <%= f.text_field :curso_id %>
+  <div class="form-group">
+    <P ALIGN=right><%= f.label :curso_id, class: "col-sm-2 col-sm-2 control-label" %>
+      <div class="col-sm-4">
+          <%=f.text_field :curso_id, class: "form-control" %>
+          <br>
+      </div>
   </div>
   <div class="actions">
     <%= f.submit %>

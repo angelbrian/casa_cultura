@@ -1,4 +1,4 @@
-<h1>Listing lessons</h1>
+<h1>Lista de Talleres</h1>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
         <td><%= lesson.clave_taller %></td>
         <td><%= lesson.profesor %></td>
         <td><%= lesson.curso %></td>
-        <td><%= link_to 'Show', lesson %></td>
-        <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
-        <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ' |Ver| ', lesson %></td>
+        <td><%= link_to ' |Editar| ', edit_lesson_path(lesson) %></td>
+        <td><%= link_to ' |Destruir| ', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Lesson', new_lesson_path %>
+<%= link_to 'Nuevo Taller', new_lesson_path %>
